@@ -14,6 +14,22 @@
         基于swagger-bootstrap-ui做了一些优化，打包成webjars。原地址是在 xiaoymin/swagger-bootstrap-ui
     </description>
 
+    <url>https://gitee.com/xiaoym/knife4j</url>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>caobinlight</name>
+        </developer>
+    </developers>
+
     <scm>
         <connection>scm:git:git@github.com:caobinlight/springdoc-bootstrap-ui.git </connection>
         <developerConnection>scm:git:git@github.com:caobinlight/springdoc-bootstrap-ui.git</developerConnection>
@@ -38,5 +54,21 @@
                 <targetPath>META-INF/resources/</targetPath>
             </resource>
         </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.6</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
     </build>
 </project>
